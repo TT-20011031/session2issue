@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "session2issue"
+version = "0.1.0"
+description = "Turn a failed Codex session into a reviewable GitHub issue draft"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Session2Issue contributors"}]
+keywords = ["codex", "agent", "bug-report", "developer-tools"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+
+[project.optional-dependencies]
+ai = ["openai>=2.0,<3.0"]
+
+[project.scripts]
+session2issue = "session2issue.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
