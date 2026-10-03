@@ -8,4 +8,7 @@ dist/
 issue.md
 issue.ai.md
 sample-issue.md
+sample-trial.md
+*.local.md
+*.context.md
 .env

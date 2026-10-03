@@ -1,3 +1,4 @@
 include README.zh-CN.md
 include CONTRIBUTING.md
-recursive-include examples *.jsonl
+include CHANGELOG.md
+recursive-include examples *.jsonl *.json *.md

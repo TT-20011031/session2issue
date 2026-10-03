@@ -1,0 +1,22 @@
+{
+  "title": "Test command cannot import the demo module",
+  "summary": {"text": "The test command exited with code 1 and reported ModuleNotFoundError for demo.", "basis": "recorded", "lines": [4]},
+  "task_goal": {"text": "Run the project's test suite and report whether it passes.", "basis": "reported", "lines": [2]},
+  "expected_behavior": {"text": "The test runner should be able to import the project's modules. Whether all tests are expected to pass needs confirmation.", "basis": "inferred", "lines": [2, 4]},
+  "actual_behavior": {"text": "python -m unittest returned exit code 1 with FAILED (errors=1): ModuleNotFoundError: No module named 'demo'.", "basis": "recorded", "lines": [3, 4]},
+  "reproduction_steps": [
+    {"text": "The recorded attempt ran python -m unittest.", "basis": "recorded", "lines": [3]},
+    {"text": "Try the same command in the project environment after documenting dependency installation and the working directory. This has not been verified as a reproducible procedure.", "basis": "inferred", "lines": [3, 4]}
+  ],
+  "attempted_fixes": [],
+  "outcome": {"text": "No later repair or verification is recorded in the included context.", "basis": "unknown", "lines": []},
+  "outcome_status": "unknown",
+  "possible_causes": [
+    {"text": "The module may be absent from the environment or outside the import search path. The error does not establish which explanation is correct.", "basis": "inferred", "lines": [4]}
+  ],
+  "questions_to_confirm": [
+    "How was the environment prepared and which Python version was used?",
+    "Is demo a local project module or an installed dependency?",
+    "Does the same command fail again in the intended working directory?"
+  ]
+}

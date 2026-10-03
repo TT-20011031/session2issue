@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "session2issue"
-version = "0.1.0"
-description = "Turn a failed Codex session into a reviewable GitHub issue draft"
+version = "0.2.0"
+description = "Turn a problem in a Codex task into a reviewable GitHub issue draft"
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
